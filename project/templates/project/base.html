@@ -1,0 +1,170 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>AvukatLy - Yeni Nesil Avukatlık Paketi</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'project/css/bootstrap.min.css' %}" >
+    <!-- Font -->
+    <link rel="stylesheet" type="text/css" href="{% static 'project/css/font-awesome.min.css' %}">
+    <!-- Slicknav -->
+    <link rel="stylesheet" type="text/css" href="{% static 'project/css/slicknav.css' %}">
+    <!-- Owl carousel -->
+    <link rel="stylesheet" type="text/css" href="{% static 'project/css/owl.carousel.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'projectcss/owl.theme.css' %}">
+    <!-- Animate -->
+    <link rel="stylesheet" type="text/css" href="{% static 'project/css/animate.css' %}">
+    <!-- Main Style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'project/css/main.css' %}">
+    <!-- Extras Style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'project/css/extras.css' %}">
+    <!-- Responsive Style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'project/css/responsive.css' %}">
+</head>
+<body>
+ <!-- Header Area wrapper Starts -->
+ <header id="header-wrap">
+    {% include 'project/components/navbar.html' %}
+  
+    {% include 'project/components/sliders.html' %}
+</header>
+<!-- Header Area wrapper End -->
+    
+    <!-- ABOUT SECTION -->
+    {% include 'project/components/about.html' %}
+  
+    <!-- SERVICES SECTION -->
+    {% include 'project/components/services.html' %}
+  
+    <!-- PORTFOLIO SECTION -->
+    {% include 'project/components/portfolio.html' %}
+  
+    <!-- FEATURES SECTION -->
+    {% include 'project/components/features.html' %}
+  
+    <!-- FACTS SECTION -->
+    {% include 'project/components/facts.html' %}
+      
+    <!-- TEAM SECTION -->
+    {% include 'project/components/team.html' %}
+
+  
+    <!-- PRICING SECTION -->
+    {% include 'project/components/pricing.html' %}
+    
+    <!-- TESTIMONIALS SECTION -->
+    {% include 'project/components/testimonials.html' %}
+  
+      <!-- Contact Form Section Start -->
+      <section id="contact" class="contact-form section-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="section-title wow fadeInDown animated" data-wow-delay="0.3s">Bize Ulaşın</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-8 col-md-6 col-xs-12">
+              <h3 class="title-head text-left">İletişim</h3>
+              <form method="POST" class="contact-form" data-toggle="validator">
+                  {% csrf_token %}
+                <div class="row">
+                  <div class="col-lg-4 col-md-12 col-xs-12">
+                    <div class="form-group">
+                      <i class="contact-icon fa fa-user"></i>
+                      <input name="fullname" type="text" class="form-control" id="name" placeholder="İsim-Soyisim" required data-error="Lütfen İsminizi Girin">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-12 col-xs-12">
+                    <div class="form-group">
+                      <i class="contact-icon fa fa-envelope-o"></i>
+                      <input name="email" type="email" class="form-control" id="email" placeholder="Email" required data-error="Lütfen Email Adresinizi Girin">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-12 col-xs-12">
+                    <div class="form-group">
+                      <i class="contact-icon fa fa-pencil-square-o"></i>
+                      <input name="topic" type="text" class="form-control" id="subject" placeholder="Konu" required data-error="Lütfen Konuyu Girin">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-xs-12">
+                    <textarea name="message" class="form-control" id="message" rows="4" placeholder="Mesaj" required data-error="Lütfen Mesajınızı Girin"></textarea>
+                    <div class="help-block with-errors"></div>
+                    <button type="submit" id="form-submit" class="btn btn-common btn-form-submit">Send Message</button>
+                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 col-xs-12">
+              <h4 class="contact-info-title text-left">İletişim Adresi</h4>
+              <div class="contact-info">
+                <address>
+                <i class="lni-map-marker icons cyan-color contact-info-icon"></i>
+              Zühtüpaşa Mahallesi, Fenerbahçe Sokak, İstanbul
+              </address>
+                <div class="tel-info">
+                  <a href="tel:1800452308"><i class="lni-mobile icons cyan-color contact-info-icon"></i>0216 432 23 43</a>
+                  <a href="tel:+61(8)82343555"><i class="lni-phone icons cyan-color contact-info-icon"></i>+90 (507) 823 35 55</a>
+                </div>
+                <a href="mailto:hello@spiritapp.com"><i class="lni-envelope icons cyan-color contact-info-icon"></i>info@avukatly.com</a>
+                <ul class="social-links">
+                  <li>
+                    <a href="#" class="fa fa-facebook"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="fa fa-twitter"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="fa fa-instagram"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="fa fa-linkedin"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Form Section End -->
+  
+      {% include 'project/components/footer.html' %}
+  
+      <!-- Go to Top Link -->
+      <a href="#" class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </a>
+      
+      <!-- Preloader -->
+      <div id="preloader">
+        <div class="loader" id="loader-1"></div>
+      </div>
+      <!-- End Preloader -->
+
+    <script src="{% static 'project/js/jquery-min.js' %}"></script>
+    <script src="{% static 'project/js/popper.min.js' %}"></script>
+    <script src="{% static 'project/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'project/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'project/js/jquery.mixitup.js' %}"></script>
+    <script src="{% static 'project/js/jquery.countTo.js' %}"></script>
+    <script src="{% static 'project/js/jquery.nav.js' %}"></script>
+    <script src="{% static 'project/js/scrolling-nav.js' %}"></script>
+    <script src="{% static 'project/js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'project/js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'project/js/form-validator.min.js' %}"></script>
+    <script src="{% static 'project/js/contact-form-script.js' %}"></script>
+    <script src="{% static 'project/js/main.js' %}"></script>
+</body>
+</html>
